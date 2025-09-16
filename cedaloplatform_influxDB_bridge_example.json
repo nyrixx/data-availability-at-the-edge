@@ -1,0 +1,229 @@
+{
+    "connections": [
+        {
+            "name": "influxdb0",
+            "connection": {
+                "driver": "influxdbv2",
+                "hostname": "influxdb",
+                "port": 8086,
+                "database": "mqtt_data",
+                "credentials": {
+                    "username": "INFLUX-CLIENT-USERNAME-PLACEHOLDER",
+                    "password": "INFLUX-CLIENT-PASSWORD-PLACEHOLDER",
+                    "token": "INFLUXDB-AUTH-TOKEN-PLACEHOLDER"
+                },
+                "organization": "portainer",
+                "debug": false
+            },
+            "topicMappings": [
+                {
+                    "name": "750362-mapping",
+                    "schemaMapping": "wago-750362-schema",
+                    "target": "modbus_data",
+                    "mqttTopics": [
+                        "softing/wago/modbus/#"
+                    ]
+                }
+            ]
+        }
+    ],
+    "schemaMappings": [
+        {
+            "name": "wago-750362-schema",
+            "mapping": [
+                {
+                    "source": "[payload][clientId]",
+                    "target": "client_id",
+                    "targetType": "tag"
+                },
+                {
+                    "source": "[payload][topicName]",
+                    "target": "mqtt_topic",
+                    "targetType": "tag"
+                },
+                {
+                    "source": "[payload][timestamputc]",
+                    "target": "timestamp_utc",
+                    "targetType": "field",
+                    "type": "string"
+                },
+                {
+                    "source": "[payload][timestamplocal]",
+                    "target": "timestamp_local",
+                    "targetType": "field",
+                    "type": "string"
+                },
+                {
+                    "source": "[timestamp]",
+                    "target": "timestamp_unix",
+                    "targetType": "field",
+                    "type": "integer"
+                },
+                {
+                    "source": "[payload][m01ch01di]",
+                    "target": "m01ch01di",
+                    "targetType": "field",
+                    "type": "boolean"
+                },
+                {
+                    "source": "[payload][m01ch02di]",
+                    "target": "m01ch02di",
+                    "targetType": "field",
+                    "type": "boolean"
+                },
+                {
+                    "source": "[payload][m01ch03di]",
+                    "target": "m01ch03di",
+                    "targetType": "field",
+                    "type": "boolean"
+                },
+                {
+                    "source": "[payload][m01ch04di]",
+                    "target": "m01ch04di",
+                    "targetType": "field",
+                    "type": "boolean"
+                },
+                {
+                    "source": "[payload][m01ch05di]",
+                    "target": "m01ch05di",
+                    "targetType": "field",
+                    "type": "boolean"
+                },
+                {
+                    "source": "[payload][m01ch06di]",
+                    "target": "m01ch06di",
+                    "targetType": "field",
+                    "type": "boolean"
+                },
+                {
+                    "source": "[payload][m01ch07di]",
+                    "target": "m01ch07di",
+                    "targetType": "field",
+                    "type": "boolean"
+                },
+                {
+                    "source": "[payload][m01ch08di]",
+                    "target": "m01ch08di",
+                    "targetType": "field",
+                    "type": "boolean"
+                },
+                {
+                    "source": "[payload][m02ch01do]",
+                    "target": "m02ch01do",
+                    "targetType": "field",
+                    "type": "boolean"
+                },
+                {
+                    "source": "[payload][m02ch02do]",
+                    "target": "m02ch02do",
+                    "targetType": "field",
+                    "type": "boolean"
+                },
+                {
+                    "source": "[payload][m02ch03do]",
+                    "target": "m02ch03do",
+                    "targetType": "field",
+                    "type": "boolean"
+                },
+                {
+                    "source": "[payload][m02ch04do]",
+                    "target": "m02ch04do",
+                    "targetType": "field",
+                    "type": "boolean"
+                },
+                {
+                    "source": "[payload][m02ch05do]",
+                    "target": "m02ch05do",
+                    "targetType": "field",
+                    "type": "boolean"
+                },
+                {
+                    "source": "[payload][m02ch06do]",
+                    "target": "m02ch06do",
+                    "targetType": "field",
+                    "type": "boolean"
+                },
+                {
+                    "source": "[payload][m02ch07do]",
+                    "target": "m02ch07do",
+                    "targetType": "field",
+                    "type": "boolean"
+                },
+                {
+                    "source": "[payload][m02ch08do]",
+                    "target": "m02ch08do",
+                    "targetType": "field",
+                    "type": "boolean"
+                },
+                {
+                    "source": "[payload][m03ch01ai]",
+                    "target": "m03ch01ai",
+                    "targetType": "field",
+                    "type": "integer"
+                },
+                {
+                    "source": "[payload][m03ch02ai]",
+                    "target": "m03ch02ai",
+                    "targetType": "field",
+                    "type": "integer"
+                },
+                {
+                    "source": "[payload][m03ch03ai]",
+                    "target": "m03ch03ai",
+                    "targetType": "field",
+                    "type": "integer"
+                },
+                {
+                    "source": "[payload][m03ch04ai]",
+                    "target": "m03ch04ai",
+                    "targetType": "field",
+                    "type": "integer"
+                },
+                {
+                    "source": "[payload][m03ch05ai]",
+                    "target": "m03ch05ai",
+                    "targetType": "field",
+                    "type": "integer"
+                },
+                {
+                    "source": "[payload][m03ch06ai]",
+                    "target": "m03ch06ai",
+                    "targetType": "field",
+                    "type": "integer"
+                },
+                {
+                    "source": "[payload][m03ch07ai]",
+                    "target": "m03ch07ai",
+                    "targetType": "field",
+                    "type": "integer"
+                },
+                {
+                    "source": "[payload][m03ch08ai]",
+                    "target": "m03ch08ai",
+                    "targetType": "field",
+                    "type": "integer"
+                },
+                {
+                    "source": "[payload][m04ch01ao]",
+                    "target": "m04ch01ao",
+                    "targetType": "field",
+                    "type": "integer"
+                },
+                {
+                    "source": "[payload][m04ch02ao]",
+                    "target": "m04ch02ao",
+                    "targetType": "field",
+                    "type": "integer"
+                },
+                {
+                    "source": "wago_modbus",
+                    "target": "device_type",
+                    "targetType": "tag",
+                    "options": {
+                        "isConst": true
+                    }
+                }
+            ]
+        }
+    ]
+}

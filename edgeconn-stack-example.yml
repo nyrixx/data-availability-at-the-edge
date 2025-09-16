@@ -1,0 +1,16 @@
+services:
+# edge connector - softing edge connector for protocol interface from modbustcp & etherip wago devices
+  edgeconnector:
+    image: softingindustrial/edgeconnector-modbus
+    container_name: edgeconn-demo-connector
+    ports:
+      - 1443:443 
+#      - 4800-4900:4800-4900
+    volumes:
+      - edge_connector_config:/config
+      - edge_connector_mqtt:/mqtt
+    restart: unless-stopped
+
+volumes:
+  edge_connector_config:
+  edge_connector_mqtt:

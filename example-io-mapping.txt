@@ -1,0 +1,49 @@
+# WAGO 750-362 modules
+# I/O in physical order of mounting
+# actual modbus addressing orders more complex models earlier in address structure
+
+# ===== MODULE 1: 750-439 (8DIO/DIA) - Position 01
+# Digital Inputs
+m01ch01di=IRX8.0
+m01ch02di=IRX8.1
+m01ch03di=IRX8.2
+m01ch04di=IRX8.3
+m01ch05di=IRX8.4
+m01ch06di=IRX8.5
+m01ch07di=IRX8.6
+m01ch08di=IRX8.7
+m01ch08di=IRX8.8
+m01ch08di=IRX8.9
+m01ch08di=IRX8.10
+m01ch08di=IRX8.11
+m01ch08di=IRX8.12
+m01ch08di=IRX8.13
+m01ch08di=IRX8.14
+m01ch08di=IRX8.15
+
+# ===== MODULE 2: 750-537 (8DO/DIA) - Position 02
+# Digital Outputs
+m02ch01do=HRX515.0
+m02ch02do=HRX515.1
+m02ch03do=HRX515.2
+m02ch04do=HRX515.3
+m02ch05do=HRX515.4
+m02ch06do=HRX515.5
+m02ch07do=HRX515.6
+m02ch08do=HRX515.7
+
+# ===== MODULE 3: 750-496 (8AI 0/4-20mA) - Position 03
+# Analog Input Values
+m03ch01ai=HR0
+m03ch02ai=HR1
+m03ch03ai=HR2
+m03ch04ai=HR3
+m03ch05ai=HR4
+m03ch06ai=HR5
+m03ch07ai=HR6
+m03ch08ai=HR7
+
+# ===== MODULE 4: 750-563 (2AO 0-20mA) - Position 04
+# Analog Output Values
+m04ch01ao=HR512
+m04ch02ao=HR513
